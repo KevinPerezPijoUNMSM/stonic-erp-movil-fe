@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">stonic-erp-movil-fe</string>
+    <string name="app_name">Stonic</string>
+
+
+    <string name="emailadress">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Ingresar</string>
+    <string name="otther_login">Puedes ingresar con:</string>
+
+    <string name="create_business_tittle">!Registra tu negocio!</string>
+    <string name="business_name">Nombre del Negocio</string>
+    <string name="business_type">Tipo de Negocio</string>
+    <string name="create_business">Crear Negocio</string>
 </resources>

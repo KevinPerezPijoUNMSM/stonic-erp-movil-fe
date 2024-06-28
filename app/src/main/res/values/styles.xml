@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema personalizado para el botón -->
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/background_primary</item>
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:backgroundTint">@null</item>
+    </style>
+</resources>
