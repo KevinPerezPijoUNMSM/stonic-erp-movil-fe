@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_sales">
+
+    <fragment
+        android:id="@+id/navigation_sales"
+        android:name="com.stonic.stonic_erp_movil_fe.SalesFragment"
+        android:label="Venta"
+        tools:layout="@layout/fragment_sales" />
+    <fragment
+        android:id="@+id/navigation_statistics"
+        android:name="com.stonic.stonic_erp_movil_fe.StatisticsFragment"
+        android:label="Estadística"
+        tools:layout="@layout/fragment_statistics" />
+    <fragment
+        android:id="@+id/navigation_clients"
+        android:name="com.stonic.stonic_erp_movil_fe.ClientsFragment"
+        android:label="Clientes"
+        tools:layout="@layout/fragment_clients" />
+    <fragment
+        android:id="@+id/navigation_storage"
+        android:name="com.stonic.stonic_erp_movil_fe.StorageFragment"
+        android:label="Almacén"
+        tools:layout="@layout/fragment_storage" />
+
+</navigation>

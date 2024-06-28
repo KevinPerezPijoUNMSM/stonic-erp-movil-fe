@@ -11,4 +11,11 @@
     <string name="business_name">Nombre del Negocio</string>
     <string name="business_type">Tipo de Negocio</string>
     <string name="create_business">Crear Negocio</string>
+
+
+    <string name="sales">Ventas</string>
+    <string name="statistics">Estadísticas</string>
+    <string name="storage">Almacén</string>
+    <string name="clients">Clientes</string>
+
 </resources>
