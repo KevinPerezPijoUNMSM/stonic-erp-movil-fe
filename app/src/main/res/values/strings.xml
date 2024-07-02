@@ -1,21 +1,37 @@
 <resources>
     <string name="app_name">Stonic</string>
-
-
-    <string name="emailadress">Correo electrónico</string>
-    <string name="password">Contraseña</string>
-    <string name="login">Ingresar</string>
-    <string name="otther_login">Puedes ingresar con:</string>
-
-    <string name="create_business_tittle">!Registra tu negocio!</string>
-    <string name="business_name">Nombre del Negocio</string>
-    <string name="business_type">Tipo de Negocio</string>
-    <string name="create_business">Crear Negocio</string>
-
-
+    <!-- Cadenas Correspondientes al Menu principal -->
     <string name="sales">Ventas</string>
     <string name="statistics">Estadísticas</string>
     <string name="storage">Almacén</string>
     <string name="clients">Clientes</string>
-
+    <!-- Cadenas Correspondientes al Usuario -->
+    <string name="user_emailadress">Correo electrónico</string>
+    <string name="user_password">Contraseña</string>
+    <string name="user_login">Ingresar</string>
+    <string name="user_otther_login">Puedes ingresar con:</string>
+    <string name="user_name">Nombres</string>
+    <string name="user_lastname">Apellidos</string>
+    <!-- Cadenas Correspondientes al Negocio -->
+    <string name="create_business">Crear Negocio</string>
+    <string name="create_business_tittle">!Registra tu negocio!</string>
+    <string name="business_name">Nombre del Negocio</string>
+    <string name="business_type">Tipo de Negocio</string>
+    <!-- Cadenas Correspondientes al Producto -->
+    <string name="create_product">Crear Producto</string>
+    <string name="create_product_tittle">!Registra tu producto!</string>
+    <string name="product_name">Nombre del Producto</string>
+    <string name="product_ruc">RUC del Producto</string>
+    <string name="product_type">Tipo de Producto</string>
+    <string name="product_description">Descripción</string>
+    <string name="product_resale">Productos de Reventa</string>
+    <string name="product_price">precio</string>
+    <string name="product_add">Agregar</string>
+    <string name="product_request">Solicitar</string>
+    <string name="product_content">Contenido</string>
+    <!-- Cadenas Correspondientes a la transacción -->
+    <string name="transaction_cancel">Cancelar</string>
+    <string name="transaction_payment">Realizar Pago</string>
+    <string name="transaction_total">Total</string>
+    <string name="transaction_client">CLiente</string>
 </resources>
