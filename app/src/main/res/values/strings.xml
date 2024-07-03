@@ -5,6 +5,10 @@
     <string name="statistics">Estadísticas</string>
     <string name="storage">Almacén</string>
     <string name="clients">Clientes</string>
+    <string name="search">Buscar</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="add_sale">Agregar venta</string>
+
     <!-- Cadenas Correspondientes al Usuario -->
     <string name="user_emailadress">Correo electrónico</string>
     <string name="user_password">Contraseña</string>
