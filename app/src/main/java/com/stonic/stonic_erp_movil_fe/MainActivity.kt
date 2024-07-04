@@ -1,5 +1,6 @@
 package com.stonic.stonic_erp_movil_fe
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
@@ -63,7 +64,23 @@ class MainActivity : AppCompatActivity() {
         val searchItem: MenuItem? = menu?.findItem(R.id.action_search)
         val searchView = searchItem?.actionView as? SearchView
         searchView?.queryHint = "Buscar..."
+
+        // Configurar el ancho del SearchView para que ocupe todo el espacio disponible
+        val layoutParams = Toolbar.LayoutParams(Toolbar.LayoutParams.MATCH_PARENT, Toolbar.LayoutParams.WRAP_CONTENT)
+        searchView?.layoutParams = layoutParams
+
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_add_product -> {
+                val intent = Intent(this, CreateProductActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun configureToolbarForDestination(destinationId: Int, toolbar: Toolbar) {
@@ -94,6 +111,8 @@ class MainActivity : AppCompatActivity() {
                 showMenuItems(toolbar.menu,
                     R.id.action_menu,
                     R.id.action_search,
+                    R.id.action_supplier,
+                    R.id.action_add_product,
                     R.id.action_notifications)
             }
             else -> {

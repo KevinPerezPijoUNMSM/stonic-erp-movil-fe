@@ -8,6 +8,8 @@
     <string name="search">Buscar</string>
     <string name="notifications">Notificaciones</string>
     <string name="add_sale">Agregar venta</string>
+    <string name="supplier">Comprar</string>
+    <string name="add_product">Agregar producto</string>
 
     <!-- Cadenas Correspondientes al Usuario -->
     <string name="user_emailadress">Correo electrónico</string>

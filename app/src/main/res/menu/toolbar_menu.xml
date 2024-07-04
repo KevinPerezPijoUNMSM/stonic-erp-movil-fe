@@ -17,7 +17,16 @@
         android:icon="@drawable/ic_add_sale"
         android:title="@string/add_sale"
         app:showAsAction="always" />
-
+    <item
+        android:id="@+id/action_supplier"
+        android:icon="@drawable/ic_supplier"
+        android:title="@string/supplier"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_add_product"
+        android:icon="@drawable/ic_add_product"
+        android:title="@string/add_product"
+        app:showAsAction="always" />
     <item
         android:id="@+id/action_notifications"
         android:icon="@drawable/ic_notification"
