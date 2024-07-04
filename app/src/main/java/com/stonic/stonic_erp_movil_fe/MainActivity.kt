@@ -1,7 +1,11 @@
 package com.stonic.stonic_erp_movil_fe
 
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -12,12 +16,20 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var sharedPreferences: SharedPreferences
+    private val PREFS_NAME = "prefs"
+    private val KEY_SELECTED_ITEM = "selected_item"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false) // Desactivar el título del Toolbar
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
@@ -27,33 +39,73 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
         bottomNavigationView.setupWithNavController(navController)
 
+        // Restaurar la última selección del BottomNavigationView
+        val lastSelectedItemId = sharedPreferences.getInt(KEY_SELECTED_ITEM, R.id.navigation_sales)
+        bottomNavigationView.selectedItemId = lastSelectedItemId
+
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            sharedPreferences.edit().putInt(KEY_SELECTED_ITEM, item.itemId).apply()
+            navController.navigate(item.itemId)
+            true
+        }
+
+        // Configurar el Toolbar según la última selección restaurada
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            when (destination.id) {
-                R.id.navigation_sales -> {
-                    toolbar.title = "Venta"
-                    toolbar.menu.clear()
-                    toolbar.inflateMenu(R.menu.menu_sales)
-                }
-                R.id.navigation_statistics -> {
-                    toolbar.title = "Estadística"
-                    toolbar.menu.clear()
-                    toolbar.inflateMenu(R.menu.menu_statistics)
-                }
-                R.id.navigation_clients -> {
-                    toolbar.title = "Clientes"
-                    toolbar.menu.clear()
-                    toolbar.inflateMenu(R.menu.menu_clients)
-                }
-                R.id.navigation_storage -> {
-                    toolbar.title = "Almacén"
-                    toolbar.menu.clear()
-                    toolbar.inflateMenu(R.menu.menu_storages)
-                }
-                else -> {
-                    toolbar.title = getString(R.string.app_name)
-                    toolbar.menu.clear()
-                }
+            configureToolbarForDestination(destination.id, toolbar)
+        }
+
+        // Navegar al destino inicial según la selección restaurada
+        navController.navigate(lastSelectedItemId)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
+        val searchItem: MenuItem? = menu?.findItem(R.id.action_search)
+        val searchView = searchItem?.actionView as? SearchView
+        searchView?.queryHint = "Buscar..."
+        return true
+    }
+
+    private fun configureToolbarForDestination(destinationId: Int, toolbar: Toolbar) {
+        toolbar.menu.clear()
+        toolbar.inflateMenu(R.menu.toolbar_menu)
+
+        when (destinationId) {
+            R.id.navigation_sales -> {
+                showMenuItems(toolbar.menu,
+                    R.id.action_menu,
+                    R.id.action_search,
+                    R.id.action_add_sale,
+                    R.id.action_notifications)
             }
+            R.id.navigation_statistics -> {
+                showMenuItems(toolbar.menu,
+                    R.id.action_menu,
+                    R.id.action_search,
+                    R.id.action_notifications)
+            }
+            R.id.navigation_clients -> {
+                showMenuItems(toolbar.menu,
+                    R.id.action_menu,
+                    R.id.action_search,
+                    R.id.action_notifications)
+            }
+            R.id.navigation_storage -> {
+                showMenuItems(toolbar.menu,
+                    R.id.action_menu,
+                    R.id.action_search,
+                    R.id.action_notifications)
+            }
+            else -> {
+                toolbar.menu.clear()
+            }
+        }
+    }
+
+    private fun showMenuItems(menu: Menu, vararg visibleItems: Int) {
+        for (i in 0 until menu.size()) {
+            val item = menu.getItem(i)
+            item.isVisible = visibleItems.contains(item.itemId)
         }
     }
 
