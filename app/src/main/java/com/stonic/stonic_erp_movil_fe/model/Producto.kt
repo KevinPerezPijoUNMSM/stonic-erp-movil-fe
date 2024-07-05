@@ -9,5 +9,6 @@ data class Producto(
     val idproductora: Int,
     val contenido: String,
     val idmedida: Int,
-    val urlimagen: String
+    val urlimagen: String,
+    val descripcion: String
 )

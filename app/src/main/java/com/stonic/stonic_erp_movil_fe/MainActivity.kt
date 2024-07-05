@@ -8,7 +8,6 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
-import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -75,7 +74,12 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_add_product -> {
-                val intent = Intent(this, CreateProductActivity::class.java)
+                val intent = Intent(this, ProductCreateActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            R.id.action_supplier -> {
+                val intent = Intent(this, ProductIndexActivity::class.java)
                 startActivity(intent)
                 true
             }

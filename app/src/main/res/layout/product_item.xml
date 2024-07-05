@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/producto_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del Producto"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/producto_codigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Negocio que lo ofrece" />
+
+    <TextView
+        android:id="@+id/producto_contenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de Producto" />
+
+    <TextView
+        android:id="@+id/producto_idmedida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="precio/cantidad" />
+
+    <TextView
+        android:id="@+id/producto_descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripción" />
+</LinearLayout>
