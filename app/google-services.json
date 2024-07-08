@@ -12,7 +12,12 @@
           "package_name": "com.stonic.stonic_erp_movil_fe"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "858289008371-vhqglh5l0lq9r62o026qr4uhf4mpo4b6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDiPhYhylZX55eDCV6HH8PED4oGoj4PhFE"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858289008371-vhqglh5l0lq9r62o026qr4uhf4mpo4b6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

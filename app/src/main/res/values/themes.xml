@@ -8,9 +8,9 @@
         <item name="colorPrimaryVariant">@color/orange</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/dark_grey</item>
+        <item name="colorSecondary">@color/white</item>
         <item name="colorSecondaryVariant">@color/sky_grey</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/orange</item>
         <!-- Background color -->
         <item name="android:colorBackground">@color/white</item>
         <!-- Customize your theme here. -->
