@@ -14,6 +14,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +25,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Verificar si el usuario ya ha iniciado sesión
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user == null) {
+            // Si el usuario no ha iniciado sesión, redirigir a LoginActivity
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish() // Finalizar la actividad actual para que no esté en el stack de actividades
+        }
 
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
 

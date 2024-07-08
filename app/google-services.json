@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "858289008371",
+    "project_id": "stonic-erp-movil-fe",
+    "storage_bucket": "stonic-erp-movil-fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858289008371:android:fcaab2bba5142f4c271186",
+        "android_client_info": {
+          "package_name": "com.stonic.stonic_erp_movil_fe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiPhYhylZX55eDCV6HH8PED4oGoj4PhFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

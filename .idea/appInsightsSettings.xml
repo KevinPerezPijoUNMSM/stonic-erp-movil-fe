@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.stonic.stonic_erp_movil_fe" />
+                  <option name="mobileSdkAppId" value="1:858289008371:android:fcaab2bba5142f4c271186" />
+                  <option name="projectId" value="stonic-erp-movil-fe" />
+                  <option name="projectNumber" value="858289008371" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

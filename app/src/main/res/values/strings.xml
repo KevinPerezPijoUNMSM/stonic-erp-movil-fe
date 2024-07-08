@@ -10,6 +10,9 @@
     <string name="add_sale">Agregar venta</string>
     <string name="supplier">Comprar</string>
     <string name="add_product">Agregar producto</string>
+    <string name="facebook_app_id">1234</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
 
     <!-- Cadenas Correspondientes al Usuario -->
     <string name="user_emailadress">Correo electrónico</string>
